@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Piazzolla&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static "css/normalize.css" %}" >
+    <link rel="stylesheet" href="{% static "css/fonts.css" %}" >
+    <link rel="stylesheet" href="{% static "css/jquery.fancybox.min.css" %}" >
+    <link rel="stylesheet" href="{% static "css/slick.css" %}" >
+    <link rel="stylesheet" href="{% static "css/style.css" %}" >
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="header_contacts">
+                <div class="container">
+                    <a class="header__phone" href="tel:+79994950876">+7-(999)-495-0876</a>
+                    <a class="header__email" href="#">mariaigorevna1206@gmail.com</a>
+                    <a data-fancybox data-src="#modal" href="javascript:;" class="header__btn" href="#">Обратная
+                        связь</a>
+                </div>
+            </div>
+        </div>
+        <div class="header__content">
+            <div class="container">
+                <div class="header__content-inner">
+                    <div class="header_logo">
+                        <a href="" hrea="#">
+                            <img src="{% static "img/logo.png" %}" alt="">
+                        </a>
+                    </div>
+                    <nav class="menu">
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">Поддержка</a></li>
+                            <li><a href="#">Лента</a></li>
+                            <li><a href="#">Вход</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="slider">
+        <div class="container">
+            <div class="slider__inner">
+                <div class="slider__item">
+                    <div class="slider__item-content">
+                        <div class="slider__title">
+                            ФОТОХОСТИНГ RAiSRUN
+                        </div>
+                        <div class="slider__text">
+                            Выдающаяся фотография – это глубина чувств, а не глубина резкости.
+                        </div>
+                        <div class="slider__text">
+                            ©Питер Адамс
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__item-content">
+                        <div class="slider__title">
+                            ФОТОХОСТИНГ RAiSRUN
+                        </div>
+                        <div class="slider__text">
+                            Существуете только вы и ваша камера. Ограничения в вашей фотографии находятся в вас, то, что
+                            мы видим, то мы и есть
+                        </div>
+                        <div class="slider__text">
+                            ©Эрнст Хаас
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__item-content">
+                        <div class="slider__title">
+                            ФОТОХОСТИНГ RAiSRUN
+                        </div>
+                        <div class="slider__text">
+                            Фотографии – это открытые двери в прошлое, но они позволяют заглянуть в будущее
+                        </div>
+                        <div class="slider__text">
+                            ©Салли Манн
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container_search">
+        <div class="container">
+            
+               <form class="sch">
+                <input  type="text" class="sch" placeholder="Поиск по хэштегу">
+                <button  type="submit" class="sch"></button>
+            </form> 
+         </div>
+            
+        </div>
+
+
+    </section>
+
+
+    <section class="top_photo">
+        <div class="container">
+            <div class="top_photo__top">
+                <div class="top_photo__title-box">
+                    <div class="top_photo__title" >
+                        Топ фото
+                    </div>
+                    <div class="top_photo__text">
+                        Это 3 лучших фото за день! Смотрите и вдохновляйтесь!
+                    </div>
+                </div>
+
+            </div>
+            <div class="top_photo__items" data-aos="fade-right" >
+                <div class="top_photo__item">
+
+                    <div class="top_photo__item-title">
+                        Имя пользователя
+                    </div>
+                    <div class="top_photo__item-text">
+                        <img src="{% static "img/top_photo/top_photo1.jpg" %}" alt="" width="250" height="250">
+                        рейтинг
+                    </div>
+
+                </div>
+                <div class="top_photo__item">
+
+                    <div class="top_photo__item-title">
+                        Имя пользователя
+                    </div>
+                    <div class="top_photo__item-text">
+                        <img src="{% static "img/top_photo/top_photo1.jpg" %}" alt="" width="250" height="250">
+                        рейтинг
+                    </div>
+
+                </div>
+                <div class="top_photo__item">
+
+                    <div class="top_photo__item-title">
+                        Имя пользователя
+                    </div>
+                    <div class="top_photo__item-text">
+                        <img src="{% static "img/top_photo/top_photo1.jpg" %}" alt="" width="250" height="250">
+                        рейтинг
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="top_photo">
+        <div class="container">
+            <div class="top_photo__top">
+                <div class="team_photo__title-box">
+                    <div class="top_photo__title">
+                        О разработчиках
+                    </div>
+                    <div class="top_photo__text">
+                        Истоки этого проекта начались на предмете РАИС, и получилось неплохо! Каждый член команды
+                        занимался чем-то своим и вместе мы смогли сделать этот прекрасный проект!
+                    </div>
+                </div>
+
+            </div>
+            <div class="top_photo__items" data-aos="fade-left">
+                <div class="top_photo__item">
+
+                    <div class="team_photo__item-title" >
+                        Антончик Евгений
+                    </div>
+                    <div class="top_photo__item-text">
+                        <img src="{% static "img/team/Evgen.png"%}" alt="" width="150" height="150">
+                    </div>
+                    <div class="team_photo__item-text">
+                        Бэк-энд разработчик
+                    </div>
+                </div>
+                <div class="top_photo__item">
+
+                    <div class="team_photo__item-title">
+                        Кравцова Анастасия
+                    </div>
+                    <div class="top_photo__item-text">
+                        <img src="{% static "img/team/Nasty.png"%}" alt="" width="150" height="150">
+                    </div>
+                    <div class="team_photo__item-text">
+                        Архитектор Базы данных
+                    </div>
+                </div>
+                <div class="top_photo__item">
+
+                    <div class="team_photo__item-title">
+                        Сайфутдинов Ильвир
+                    </div>
+                    <div class="top_photo__item-text">
+                        <img src="{% static "img/team/Ilvir.png"%}" alt="" width="150" height="150">
+                    </div>
+                    <div class="team_photo__item-text">
+                         Тим-лид Бэк-энд разработчик
+                    </div>
+                </div>
+                <div class="top_photo__item">
+
+                    <div class="team_photo__item-title">
+                       Грохотова Екатерина
+                    </div>
+                    <div class="top_photo__item-text">
+                        <img src="{% static "img/team/Katy.png"%}" alt="" width="150" height="150">
+                    </div>
+                    <div class="team_photo__item-text">
+                        Тестировщик
+                    </div>
+                </div>
+                <div class="top_photo__item">
+
+                    <div class="team_photo__item-title">
+                        Васильева Мария
+                    </div>
+                    <div class="top_photo__item-text">
+                        <img src="{% static "img/team/Masha.png"%}" alt="" width="150" height="150">
+                    </div>
+                    <div class="team_photo__item-text">
+                        Фронт-энд разработчик
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="news">
+        <div class="container">
+            <div class="top_photo__top">
+                <div class="top_photo__title-box">
+                    <div class="top_photo__title" >
+                        О фотограии
+                    </div>
+                    <div class="top_photo__text">
+                        Здесь собраны статьи, которые смогут помочь вам сделать ваши фото еще лучше!
+                    </div>
+                </div>
+
+            </div>
+          <div class="news__inner">
+            <div class="news__slider">
+              <div class="news__slider-inner">
+                <div class="news__slider-item">
+                  <div class="news__slider-title">
+                    7 ошибок любого фотографа
+                  </div>
+                  <div class="news__slider-text">
+                    Если ты фотограф, у тебя есть, как минимум, семь смешных историй, о которых ты предпочел бы не вспоминать. 
+                    Ну да, так и есть — как человеку свойственно ошибаться, так и фотографу свойственно ошибаться снова и снова. 
+                    Какими бы мы ни были прагматиками, мы все равно снимаем под влиянием наших ощущений, а не головы, а значит, 
+                    регулярно разрываемся между головой и сердцем, генерим внутренние конфликты, а потом их напряженно решаем. 
+                    Если взять на вооружение такие анти-науки, как социологию и статистику, мы получим уверенный список наших...
+                  </div>
+                  <div class="news__btn">
+                    <a href="https://focused.ru/articles/7-errors">
+                      Читать дальше...
+                    </a>
+                  </div>
+                </div>
+                <div class="news__slider-item">
+                  <div class="news__slider-title">
+                    Хочу учиться фотографии
+                  </div>
+                  <div class="news__slider-text">
+                    Есть такой мультик детский «Хочу бодаться», про бычка, который просто хотел научиться бодаться. 
+                    То есть, он не  хотел стать быком – просто хотел научиться бодаться. Если вы вдруг не знаете, 
+                    у быков бодание – лишь часть брачных игр, точнее, процесса борьбы за партнершу, никакого отношения к 
+                    жизни до или после оно не имеет. По большому счету, это просто понты. Интересно, что так же обстоит ситуация и 
+                    с людьми – нет, быками никто становиться не собирается, да и бодаться homo sapiens ни к чему, речь совсем о другом. 
+                    В этом году будет вот уже три года, как я учу фотографии в режиме...
+                  </div>
+                  <div class="news__btn">
+                    <a href="https://focused.ru/articles/beginners/i-want-to-study">
+                      Читать дальше...
+                    </a>
+                  </div>
+                </div>
+                <div class="news__slider-item">
+                  <div class="news__slider-title">
+                    Подготовка фотографий к публикации в сети
+                  </div>
+                  <div class="news__slider-text">
+                    Все мы явственно видим, как ужасно обрабатывают фотки большинство lj-юзеров для выкладывания в 
+                    блог. Чем они их сжимают, корежат и артефачат, я не знаю. Наверняка с помощью мясорубки и какой-то матери.
+                    Мы же с помощью одного из лучших просмотрщиков графики, IrfanView, попытаемся сделать нашу жизнь лучше. 
+                    Сначала надо поиметь этот софт – к слову он очень небольшой по размеру (овации) и бесплатный (все зевают). 
+                    На сайте программы можно скачать саму программу (884KB), нужный вам файл локализации (например – русский) 
+                    и плагины (~5MB). Плагины можно и не качать, но я советую потратить трафик… пригодится...
+                  </div>
+                  <div class="news__btn">
+                    <a href="https://focused.ru/articles/software/free/irfan">
+                      Читать дальше...
+                    </a>
+                  </div>
+                </div>
+                <div class="news__slider-item">
+                    <div class="news__slider-title">
+                        Ты единственный, кто тебя видит по-другому
+                    </div>
+                    <div class="news__slider-text">
+                        Вопрос портрета обычно связан с одной психологической тонкостью. Нет, тонкостей много, 
+                        но не обо всех из них мы сегодня поговорим. Есть вопросы, связанные непосредственно с восприятием
+                        человеком собственного лица. Прежде всего, это память, второй же момент связан с привычкой, что, 
+                        по сути, все та же память, просто немного с другой стороны.
+                    </div>
+                    <div class="news__btn">
+                      <a href="https://focused.ru/articles/your-face-unique">
+                        Читать дальше...
+                      </a>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+      </section>
+
+    <footer class="footer">
+        <div class="footer__content">
+          <div class="container">
+            <div class="footer__inner">
+              <div class="footer__info">
+                <div class="footer__title">
+                  Фотохостинг RaisRun
+                </div>
+                <div class="footer__text">
+                  Приостановленный момент - оживляет дейсвтвие!
+                </div>
+                <a data-fancybox data-src="#modal" href="javascript:;" class="header__btn" href="#">
+                  Обратная связь
+                </a>
+                <ul class="footer__list">
+                  <li><a class="footer__phone" href="tel:+79994950876">+7-(999)-495-0876</a></li>
+                  <li><a href="#">mariaigorevna1206@gmail.com</a></li>
+                  <li><a class="footer__adress" href="#">Томск, Красноармейская ул., 146</a></li>
+                </ul>
+              </div>
+              <div class="footer__map">
+                <iframe height="250px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2204.797781680577!2d84.9760504158195!3d56.45401608074669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4326ecb685e1cf85%3A0x5216463ced706c80!2z0JrRgNCw0YHQvdC-0LDRgNC80LXQudGB0LrQsNGPINGD0LsuLCAxNDYsINCi0L7QvNGB0LosINCi0L7QvNGB0LrQsNGPINC-0LHQuy4sIDYzNDA0NQ!5e0!3m2!1sru!2sru!4v1602268269053!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copy">
+          <div class="container">
+            <div class="copy__text">
+              © 2020 RaisRun. Все права защищены.
+            </div>
+          </div>
+        </div>
+      </footer> 
+      
+  <div id="modal">
+    <form>
+      <input type="text" placeholder="Введите ваше имя">
+      <input type="text" placeholder="Введите ваш телефон">
+      <input type="text" placeholder="Введите ваш email">
+      <input type="submit" value="Отправить">
+    </form>
+  </div>
+
+
+
+
+
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static "js/jquery.fancybox.min.js" %}" ></script>
+    <script src="{% static "js/slick.min.js"%}" ></script>
+    <script src="{% static "js/main.js"%}" ></script>
+
+</body>
+
+</html>
