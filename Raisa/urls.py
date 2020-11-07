@@ -19,6 +19,7 @@ from RaisaRun import views
 
 urlpatterns = [
 	path('', views.index, name='index'),
+	path('photos', views.photos, name='photos'),
 	path('signup', views.signup, name='signup'),
 	path('images', views.images, name='images'),
 ]

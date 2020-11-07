@@ -7,6 +7,10 @@ def index(request):
     data = {}
     return render(request, "index.html", context=data)
 
+def photos(request):
+	data = {}
+	return render(request, "photos.html", context=data)
+
 def signup(request):
 	data = {}
 	return render(request, "index.html", context=data)

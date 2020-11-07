@@ -13,8 +13,15 @@ li{
 }
 .container{
     max-width: 1170px;
+    
     margin: 0 auto;
     padding: 0 15 px;
+}
+.container_lenta{
+  max-width: 1170px; 
+  margin: 0 auto;
+  padding: 0 15 px;
+  padding-top: 10px;
 }
 body{
     font-family: 'PT Serif', serif; 
@@ -53,6 +60,26 @@ header{
     content: "";
     clear: both;
     display: block;
+}
+.header__btn__sign_up{ /*регистрация*/
+  float: right;
+  line-height: 36px;
+  color: #024f92;
+  padding: 5px 20px 5px 20px;
+  font-size: 17px;
+  display: block;
+  position: relative;
+  font-family: 'Pacifico', cursive;
+}
+.header__btn__sign_in{ /*вход*/
+  float: right;
+  line-height: 36px;
+  color: #024f92;
+  padding: 5px 20px 5px 20px;
+  font-size: 17px;
+  display: block;
+  position: relative;
+  font-family: 'Pacifico', cursive;
 }
 .header__phone,
 .header__email{
@@ -687,4 +714,129 @@ input.sch {
   letter-spacing: 0.25px;
   padding: 5px 38px;
   border: 3px solid #e6e6e6;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+  text-align: center;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.lenta_photo__item{
+  float: left;
+  position: relative;
+  width: 30%;
+  padding-bottom: 30%;
+  margin: 1.66%;
+}
+.img_lenta{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.lenta_photo{
+  padding: 50px 0px 30px;
+  margin: 0 auto;
+  
+}
+
+.btn_photo{
+ position: relative;
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #024f92;
+  padding: 10 10 10;
+  margin: 0 auto;
+
+  cursor: pointer;
+  outline: none;
+  background-color: #4cb1c7;
+}
+.btn_photo.slick-disabled{
+  cursor: default;
+  background-color: transparent;
+}
+.btn_photo:before{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'icomoon';
+  color: #fff;
+}
+.btn_photo_next:before{
+  content: "\f105";
+}
+.btn_photo_prev:before{
+  content: "\f104";
+}
+.btn_photo_next{
+  right: 0;
+}
+.btn_photo_prev{
+  left: 0;
+}
+#sign_up, #sign_in{
+  width: 30%;
+}
+#sign_up input, #sign_in input{
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  outline: none;
+  height: 40px;
+  border: 1px solid #e6e6e6;
+  padding: 0px 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+#sign_up input[type="submit"], #sign_in input[type="submit"]{
+  float: right;
+  width: 40%;
+  background-color: #024f92;
+  color:#ffffff ;
+  border: none;
+}
+#sign_up input[type="reset"], #sign_in input[type="reset"]{
+  float: left;
+  width: 40%;
+  color:#4cb1c7;
+  background-color: #ffffff;
+  border: none;
+}
+.title_sign_in__up{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #024f92;
+  font-family: 'Pacifico', cursive;
+  margin-bottom: 10px;
+}
+.polit_conf{
+  font-family:'Roboto';
+  text-align: center;
 }
