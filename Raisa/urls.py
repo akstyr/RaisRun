@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from RaisaRun import views
+from django.conf.urls import url
 
 urlpatterns = [
 	path('', views.index, name='index'),
 	path('photos', views.photos, name='photos'),
-	path('signup', views.signup, name='signup'),
+	url('signup', views.SignUpView.as_view(), name='signup'),
 	path('images', views.images, name='images'),
 ]
