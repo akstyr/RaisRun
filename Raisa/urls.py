@@ -22,5 +22,6 @@ urlpatterns = [
 	path('', views.index, name='index'),
 	path('photos', views.photos, name='photos'),
 	url('signup', views.SignUpView.as_view(), name='signup'),
+	url(r'^ajax/validate_username/$', views.validate_username, name='validate_username'),
 	path('images', views.images, name='images'),
 ]
