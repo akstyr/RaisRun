@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -122,121 +123,38 @@
                 </div>
             </div>
 
+        
+                
             <div class="container_lenta">
-                <div class="top_photo__items">
+                <div class="top_photo__item">
 
-                    <div class="top_photo__item">
-
-                        <div class="top_photo__item-title">
-                            Имя пользователя
-                        </div>
-                        <div class="top_photo__item-text">
-                            <a class="fancybox" rel="gallery1" href="img/photos/photo_1.jpg"
-                                title="Twilight Memories (doraartem)">
-                                <img src="img/photos/photo_1.jpg" alt="" width="250" height="250" />
-                            </a>
-                            рейтинг
-                            хэштег
-                        </div>
-
+                    <div class="top_photo__item-title">
+                        Имя пользователя
                     </div>
-                    <div class="top_photo__item">
-
-                        <div class="top_photo__item-title">
-                            Имя пользователя
-                        </div>
-                        <div class="top_photo__item-text">
-                            <a class="fancybox" rel="gallery1" href="img/photos/photo_1.jpg"
-                                title="Twilight Memories (doraartem)">
-                                <img src="img/photos/photo_1.jpg" alt="" width="250" height="250" />
-                            </a>
-                            рейтинг
-                            хэштег
-                        </div>
-
+                    <div class="top_photo__item-text">
+                        <a class="fancybox" rel="gallery1" href="img/photos/photo_1.jpg"
+                            title="Twilight Memories (doraartem)">
+                            <img src="img/photos/photo_1.jpg" alt="" width="250" height="250" />
+                        </a>
+                        рейтинг
+                        хэштег
                     </div>
-                    <div class="top_photo__item">
 
-                        <div class="top_photo__item-title">
-                            Имя пользователя
-                        </div>
-                        <div class="top_photo__item-text">
-                            <a class="fancybox" rel="gallery1" href="img/photos/photo_1.jpg"
-                                title="Twilight Memories (doraartem)">
-                                <img src="img/photos/photo_1.jpg" alt="" width="250" height="250" />
-                            </a>
-                            рейтинг
-                            хэштег
-                        </div>
-
-                    </div>
                 </div>
-
-            </div>
-            <div class="container_lenta">
                 <div class="top_photo__items">
-
-                    <div class="top_photo__item">
-
-                        <div class="top_photo__item-title">
-                            Имя пользователя
-                        </div>
-                        <div class="top_photo__item-text">
-                            <a class="fancybox" rel="gallery1" href="img/photos/photo_1.jpg"
-                                title="Twilight Memories (doraartem)">
-                                <img src="img/photos/photo_1.jpg" alt="" width="250" height="250" />
-                            </a>
-                            рейтинг
-                            хэштег
-                        </div>
-
-                    </div>
-                    <div class="top_photo__item">
-
-                        <div class="top_photo__item-title">
-                            Имя пользователя
-                        </div>
-                        <div class="top_photo__item-text">
-                            <a class="fancybox" rel="gallery1" href="img/photos/photo_1.jpg"
-                                title="Twilight Memories (doraartem)">
-                                <img src="img/photos/photo_1.jpg" alt="" width="250" height="250" />
-                            </a>
-                            рейтинг
-                            хэштег
-                        </div>
-
-                    </div>
-                    <div class="top_photo__item">
-
-                        <div class="top_photo__item-title">
-                            Имя пользователя
-                        </div>
-                        <div id = "asd" class="top_photo__item-text">
-                            <a class="fancybox" rel="gallery1" href="img/photos/photo_1.jpg"
-                                title="Twilight Memories (doraartem)">
-                                <img src="" alt="" width="250" height="250" />
-                            </a>
-                            рейтинг
-                            хэштег
-                        </div>
-
-                    </div>
-                    <button type="button" class="btn_photo btn_photo_prev" ></button>             
-                <button type="button" class="btn_photo btn_photo_next"></button>
+                    <div class = "image-box"  width="250" height="250"></div>                             
+                
+                    
                 </div>
             
                 
                 
-            </div>
+           
             
 
        </div>
-       <p>Какую страницу желаете открыть?</p>  
-       <form>  
-           <input id="btn1" type="button" value="Страница 1">   
-           <input id="btn2" type="button" value="Страница 2">  
-       </form>  
-       <div id="content"></div>  
+       
+       
          
        <script>  
            $(document).ready(function(){  
@@ -361,6 +279,40 @@
 
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/popuu_img.js"></script>
+    <script defer>
+        const shuffleArray = arr => arr.sort(() => Math.random() - 0.5)
+
+        var list = []
+        var indices = []
+        var numberOfImages = 8;
+        
+       
+
+        for(i = 1; i < numberOfImages; i++){
+            indices[i] = parseInt(i);
+            list[i] = "D:/учеба/9 семестр/РАИС/raisrun/img/photos/photo_"+ (i) + ".jpg";
+        }
+        shuffleArray(indices);
+        for(i = 0; i < numberOfImages; i++){
+
+            if(list[indices[i]] == undefined){
+                continue;
+            } 
+                      
+            var img = document.createElement('img');
+            img.setAttribute('src', list[indices[i]]);
+            img.className = "top_photo__item lenta_photo__item";
+           
+            
+
+            
+            
+            $('.image-box').append(img);
+       
+        }
+        </script>
+        
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
@@ -374,6 +326,21 @@
             $(".fancybox").fancybox();
         });
     </script>
+    <script type='text/javascript'>
+        window.onload = function(){
+   var image = document.getElementById('image'), even = true;                  
+   image.onclick = function(){
+       if (even) {
+           this.style.zoom = "4";
+           even = false;
+       } else {
+           this.style.zoom = "1";
+           even = true;
+       }
+   }
+       };
+</script>
+      
 
 </body>
 
