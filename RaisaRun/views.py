@@ -2,8 +2,11 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.edit import CreateView
+from django.http import FileResponse
 from django.http import JsonResponse
 from django.contrib.auth.models import User
+import json
+import os
  
 def index(request):
     data = {}
@@ -13,25 +16,23 @@ def photos(request):
 	data = {}
 	return render(request, "photos.html", context=data)
 
-def validate_username(request):
+def registrate_user(request):
 	username = request.GET.get('username', None)
-	print(username)
+	
 	data = {
-		'is_taken': User.objects.filter(username__iexact=username).exists()
+		'is_taken': username
 	}
-	print(data)
 	return JsonResponse(data)
 
-class SignUpView(CreateView):
-	template_name = "signup.html"
-	form_class = UserCreationForm
+def get_count(reques):
+	file_count = 0
+	with os.scandir("static/img/photos/") as dirList:
+		for entry in dirList:
+			if entry.is_file():
+				file_count = file_count + 1
+		return JsonResponse({'count': str(file_count)})
 
-def images(request):
-	if request.method == "POST":
-		form = NameForm(request.POST)
-		if form.is_valid():
-			return HttpResponseRedirect('/thanks/')
-	else:
-		form = NameForm()
 
-	return render(request, "index.html", {'form': form})
+def get_photo(request):
+	fileNum = request.GET.get('fileNum', None)
+	return FileResponse(open("static/img/photos/photo_"+ fileNum + ".jpg", "rb"))

@@ -20,8 +20,9 @@ from django.conf.urls import url
 
 urlpatterns = [
 	path('', views.index, name='index'),
+	path('home', views.index, name='index'),
 	path('photos', views.photos, name='photos'),
-	url('signup', views.SignUpView.as_view(), name='signup'),
-	url(r'^ajax/validate_username/$', views.validate_username, name='validate_username'),
-	path('images', views.images, name='images'),
+	url(r'^ajax/registrate_user$', views.registrate_user, name='registrate_user'),
+	url(r'^ajax/get_photo/$', views.get_photo, name='get_photos'),
+	url(r'^ajax/get_count/$', views.get_count, name='get_count'),
 ]
