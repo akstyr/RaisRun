@@ -127,47 +127,30 @@
         
                 
             <div class="container_lenta">
+                <div class = "top_photo__item">
+                    
+                      <div class = "image-box"   ></div>  
+                   
+
+                    
+                </div>
+
+                 
+            </div>
                
                 
-               
-                <div class="top_photo__items">
+
                     
-                        
-                        <div class = "image-box"  width="250" height="250" ></div> 
-                                                    
-                                    
-                </div>
+                   
+                
+               
                         
                       
        </div>
        
        
          
-       <script>  
-           $(document).ready(function(){  
-             
-               $('#btn1').click(function(){  
-                   $.ajax({  
-                       url: "index.html",  
-                       cache: false,  
-                       success: function(html){  
-                           $("#content").html(html);  
-                       }  
-                   });  
-               });  
-                 
-               $('#btn2').click(function(){  
-                   $.ajax({  
-                       url: "index.html",  
-                       cache: false,  
-                       success: function(html){  
-                           $("#content").html(html);  
-                       }  
-                   });  
-               });  
-                 
-           });  
-       </script> 
+       
 
     </section>
 
@@ -285,18 +268,24 @@
                 continue;
             } 
             
+            
+                    
+           
+            
+            var newHeading = "<h1>Имя рейтинг</h1>";
+            
+            var newParagraph = document.createElement("a");
+            newParagraph.setAttribute('class', ' fancybox');
+            newParagraph.setAttribute('rel', 'gallery1');
+            newParagraph.setAttribute('href', list[indices[i]]);
+		    newParagraph.innerHTML = "<em>Full</em>";
+            var newImage = $("<img src=\""+list[indices[i]]+"\" style = \"width: 350px; \" height:350px \">");
             var img = document.createElement('img');
             img.setAttribute('src', list[indices[i]]);
-            img.className = "top_photo__item lenta_photo__item ";
-                    
-            var newHeading = "<h1>Имя рейтинг</h1>";
-            var newParagraph = document.createElement("p");
-		    newParagraph.innerHTML = "<em>Рейтинг</em>";
-            var newImage = $("<img src=\""+list[indices[i]]+"\" >");
-       
+            
             
            
-            $('.image-box').append(newHeading, newParagraph, newImage);
+            $('.image-box').append(newHeading, newImage,  newParagraph);
                   
         }
         
