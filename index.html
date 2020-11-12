@@ -1,37 +1,4 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
  
-@mariaigorevna 
-Learn Git and GitHub without any code!
-Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-
-
-akstyr
-/
-RaisRun
-1
-00
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-RaisRun/templates/index.html
-@AntEugene
-AntEugene Add some ajax posts
-Latest commit d87c2b7 17 hours ago
- History
- 1 contributor
-441 lines (408 sloc)  22.6 KB
-  
 <!DOCTYPE html>
 <html lang="ru">
 {% load static %}
@@ -50,7 +17,6 @@ Latest commit d87c2b7 17 hours ago
     <link rel="stylesheet" href="{% static "css/slick.css" %}">
     <link rel="stylesheet" href="{% static "css/style.css" %}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	{% block stylesheet %} {% endblock %}
 </head>
 
 <body>
@@ -76,7 +42,7 @@ Latest commit d87c2b7 17 hours ago
                     </div>
                     <nav class="menu">
                         <ul>
-                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="home">Главная</a></li>
                             <li><a data-fancybox data-src="#support" href="#">Поддержка</a></li>
                             <li><a href="photos">Лента</a></li>
                         </ul>
@@ -85,10 +51,6 @@ Latest commit d87c2b7 17 hours ago
             </div>
         </div>
     </header>
-	<main>
-		{% block content %}
-		{% endblock %}
-	</main>
     <section class="slider">
         <div class="container">
             <div class="slider__inner">
