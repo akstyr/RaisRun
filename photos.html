@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
+    
 </head>
 
 <body>
@@ -126,32 +127,18 @@
         
                 
             <div class="container_lenta">
-                <div class="top_photo__item">
-
-                    <div class="top_photo__item-title">
-                        Имя пользователя
-                    </div>
-                    <div class="top_photo__item-text">
-                        <a class="fancybox" rel="gallery1" href="img/photos/photo_1.jpg"
-                            title="Twilight Memories (doraartem)">
-                            <img src="img/photos/photo_1.jpg" alt="" width="250" height="250" />
-                        </a>
-                        рейтинг
-                        хэштег
-                    </div>
-
-                </div>
+               
+                
+               
                 <div class="top_photo__items">
-                    <div class = "image-box"  width="250" height="250"></div>                             
-                
                     
+                        
+                        <div class = "image-box"  width="250" height="250" ></div> 
+                                                    
+                                    
                 </div>
-            
-                
-                
-           
-            
-
+                        
+                      
        </div>
        
        
@@ -285,10 +272,8 @@
 
         var list = []
         var indices = []
-        var numberOfImages = 8;
-        
+        var numberOfImages = 8;      
        
-
         for(i = 1; i < numberOfImages; i++){
             indices[i] = parseInt(i);
             list[i] = "D:/учеба/9 семестр/РАИС/raisrun/img/photos/photo_"+ (i) + ".jpg";
@@ -299,19 +284,24 @@
             if(list[indices[i]] == undefined){
                 continue;
             } 
-                      
+            
             var img = document.createElement('img');
             img.setAttribute('src', list[indices[i]]);
-            img.className = "top_photo__item lenta_photo__item";
-           
-            
-
-            
-            
-            $('.image-box').append(img);
+            img.className = "top_photo__item lenta_photo__item ";
+                    
+            var newHeading = "<h1>Имя рейтинг</h1>";
+            var newParagraph = document.createElement("p");
+		    newParagraph.innerHTML = "<em>Рейтинг</em>";
+            var newImage = $("<img src=\""+list[indices[i]]+"\" >");
        
+            
+           
+            $('.image-box').append(newHeading, newParagraph, newImage);
+                  
         }
+        
         </script>
+    
         
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -326,20 +316,7 @@
             $(".fancybox").fancybox();
         });
     </script>
-    <script type='text/javascript'>
-        window.onload = function(){
-   var image = document.getElementById('image'), even = true;                  
-   image.onclick = function(){
-       if (even) {
-           this.style.zoom = "4";
-           even = false;
-       } else {
-           this.style.zoom = "1";
-           even = true;
-       }
-   }
-       };
-</script>
+ 
       
 
 </body>
