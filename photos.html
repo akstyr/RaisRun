@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-{% load static%}
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+/title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -221,6 +215,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src= "{% static "js/popuu_img.js" %}" ></script>
     <script defer>
+        	$.ajax({
+				url: '/ajax/get_photos/',
+				data: {
+					
+				},
+				dataType: 'json',
+				success: function (data) {
+					if (data.is_taken) {
+						alert("A user with this username already exists.");
+					}
+				}
+			});
+		
+
+
+
+
         const shuffleArray = arr => arr.sort(() => Math.random() - 0.5)
 
         var list = []
