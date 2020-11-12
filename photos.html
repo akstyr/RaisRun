@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-
+{% load static%}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,15 +9,13 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Piazzolla&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{% static "css/normalize.css" %}" >
+    <link rel="stylesheet" href="{% static "css/fonts.css" %}" >
+    <link rel="stylesheet" href="{% static "css/jquery.fancybox.min.css" %}" >
+    <link rel="stylesheet" href="{% static "css/slick.css" %}" >
+    <link rel="stylesheet" href="{% static "css/style.css" %}" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    
 </head>
 
 <body>
@@ -38,7 +36,7 @@
                 <div class="header__content-inner">
                     <div class="header_logo">
                         <a href="" hrea="#">
-                            <img src="img/logo.png" alt="">
+                            <img src="{% static "img/logo.png" %}" alt="">
                         </a>
                     </div>
                     <nav class="menu">
@@ -53,6 +51,11 @@
         </div>
     </header>
     <section class="slider">
+	<style>
+		.slider {
+		background-image: url("{% static "img/slider-fon_5.jpg" %}");
+	}
+	</style>
         <div class="container">
             <div class="slider__inner">
                 <div class="slider__item">
@@ -105,13 +108,9 @@
                 <input  type="text" class="sch" placeholder="Поиск по хэштегу">
                 <button  type="submit" class="sch"></button>
             </form> 
-         </div>
-            
+         </div>            
         </div>
-
-
     </section>
-
 
     <section class="lenta_photo">
         <div class="container">
@@ -122,36 +121,13 @@
                         Лента фотографий
                     </div>
                 </div>
-            </div>
-
-        
-                
+            </div>    
             <div class="container_lenta">
                 <div class = "top_photo__item">
-                    
-                      <div class = "image-box"   ></div>  
-                   
-
-                    
-                </div>
-
-                 
+                    <div class = "image-box"   ></div>  
+                </div>                 
             </div>
-               
-                
-
-                    
-                   
-                
-               
-                        
-                      
-       </div>
-       
-       
-         
-       
-
+        </div>     
     </section>
 
     <footer class="footer">
@@ -204,7 +180,7 @@
     <div id="sign_up" style="display: none;">
         <h1 class="title_sign_in__up">Cоздайте аккаунт в
             <a href="" hrea="#">
-                <img src="img/logo.png" alt="">
+                <img src="{% static "img/logo.png" %}" alt="">
             </a>
         </h1>
         <form>
@@ -241,15 +217,9 @@
             </div>
         </form>
       </div> 
-
-
-
-
-
-
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/popuu_img.js"></script>
+    <script type="text/javascript" src= "{% static "js/popuu_img.js" %}" ></script>
     <script defer>
         const shuffleArray = arr => arr.sort(() => Math.random() - 0.5)
 
@@ -266,14 +236,8 @@
 
             if(list[indices[i]] == undefined){
                 continue;
-            } 
-            
-            
-                    
-           
-            
-            var newHeading = "<h1>Имя рейтинг</h1>";
-            
+            }
+             var newHeading = "<h1>Имя рейтинг</h1>";            
             var newParagraph = document.createElement("a");
             newParagraph.setAttribute('class', ' fancybox');
             newParagraph.setAttribute('rel', 'gallery1');
@@ -281,14 +245,9 @@
 		    newParagraph.innerHTML = "<em>Full</em>";
             var newImage = $("<img src=\""+list[indices[i]]+"\" style = \"width: 350px; \" height:350px \">");
             var img = document.createElement('img');
-            img.setAttribute('src', list[indices[i]]);
-            
-            
-           
-            $('.image-box').append(newHeading, newImage,  newParagraph);
-                  
-        }
-        
+            img.setAttribute('src', list[indices[i]]);         
+            $('.image-box').append(newHeading, newImage,  newParagraph);                  
+        }        
         </script>
     
         
@@ -297,17 +256,13 @@
         AOS.init();
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{% static "js/jquery.fancybox.min.js" %}"></script>
+    <script src="{% static "js/slick.min.js" %}"></script>
+    <script src="{% static "js/main.js" %}"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $(".fancybox").fancybox();
         });
     </script>
- 
-      
-
-</body>
-
+    </body>
 </html>
