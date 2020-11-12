@@ -254,14 +254,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="{% static "js/popuu_img.js" %}"></script>
     <script defer>
-
+        i = 0;
         $.ajax({
             url: '/ajax/get_count/',
             data: {},
             dataType: 'json',
             success: function (data) {
-                if (data.count) {
-                    alert("A user with this username already exists.");
+                if (data.count > 0) {
+                    i = data.count;
                 }
             }
         });
@@ -274,8 +274,17 @@
         var numberOfImages = 10;
 
         for (i = 1; i < numberOfImages; i++) {
-            indices[i] = parseInt(i);
-            list[i] = "D:/учеба/9 семестр/РАИС/raisrun/img/photos/photo_" + (i) + ".jpg";
+            $.ajax({
+                url: '/ajax/get_photo/',
+                data: {
+                    'fileNum': i
+                },
+                dataType: 'json',
+                success: function (data) {
+                        //оработка файла с фото
+                    }
+                }
+            });
         }
         shuffleArray(indices);
         for (i = 0; i < 3; i++) {
