@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="{% static "css/slick.css" %}">
     <link rel="stylesheet" href="{% static "css/style.css" %}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	{% block stylesheet %} {% endblock %}
 </head>
 
 <body>
@@ -43,7 +42,7 @@
                     </div>
                     <nav class="menu">
                         <ul>
-                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="home">Главная</a></li>
                             <li><a data-fancybox data-src="#support" href="#">Поддержка</a></li>
                             <li><a href="photos">Лента</a></li>
                         </ul>
@@ -52,10 +51,6 @@
             </div>
         </div>
     </header>
-	<main>
-		{% block content %}
-		{% endblock %}
-	</main>
     <section class="slider">
         <div class="container">
             <div class="slider__inner">
