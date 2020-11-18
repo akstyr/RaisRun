@@ -23,6 +23,6 @@ urlpatterns = [
 	path('home', views.index, name='index'),
 	path('photos', views.photos, name='photos'),
 	url(r'^ajax/registrate_user$', views.registrate_user, name='registrate_user'),
-	url(r'^ajax/get_photo/$', views.get_photo, name='get_photos'),
+	url(r'^ajax/get_photo/$', views.get_photo, name='get_photo'),
 	url(r'^ajax/get_count/$', views.get_count, name='get_count'),
 ]

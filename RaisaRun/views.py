@@ -35,4 +35,5 @@ def get_count(reques):
 
 def get_photo(request):
 	fileNum = request.GET.get('fileNum', None)
+	print("photo_" + fileNum + ".jpg")
 	return FileResponse(open("static/img/photos/photo_"+ fileNum + ".jpg", "rb"))

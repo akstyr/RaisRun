@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Piazzolla&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "css/normalize.css" %}">
+    <link rel="stylesheet" href="{% static "css/fonts.css" %}">
+    <link rel="stylesheet" href="{% static "css/jquery.fancybox.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/slick.css" %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="header_contacts">
+                <div class="container">
+                    <a class="header__phone" href="tel:+79994950876">+7-(999)-495-0876</a>
+                    <a class="header__email" href="#">mariaigorevna1206@gmail.com</a>
+                    <a data-fancybox data-src="#modal" href="javascript:;" class="header__btn" href="#">Обратная
+                        связь</a>
+                    <a data-fancybox data-src="#sign_up" href="javascript:;" class="header__btn__sign_up"
+                        href="#">Регистрация</a>
+                    <a data-fancybox data-src="#sign_in" href="javascript:;" class="header__btn__sign_in"
+                        href="#">Вход</a>
+                </div>
+            </div>
+        </div>
+        <div class="header__content">
+            <div class="container">
+                <div class="header__content-inner">
+                    <div class="header_logo">
+                        <a href="" hrea="#">
+                            <img src="{% static "img/logo.png" %}" alt="">
+                        </a>
+                    </div>
+                    <nav class="menu">
+                        <ul>
+                            <li><a href="home">Главная</a></li>
+                            <li><a data-fancybox data-src="#support" href="#">Поддержка</a></li>
+                            <li><a href="photos">Лента</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="slider">
+        <style>
+            .slider {
+                background-image: url("{% static "img/slider-fon_5.jpg" %}");
+            }
+        </style>
+        <div class="container">
+            <div class="slider__inner">
+                <div class="slider__item">
+                    <div class="slider__item-content">
+                        <div class="slider__title">
+                            ФОТОХОСТИНГ RAiSRUN
+                        </div>
+                        <div class="slider__text">
+                            Выдающаяся фотография – это глубина чувств, а не глубина резкости.
+                        </div>
+                        <div class="slider__text">
+                            ©Питер Адамс
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__item-content">
+                        <div class="slider__title">
+                            ФОТОХОСТИНГ RAiSRUN
+                        </div>
+                        <div class="slider__text">
+                            Существуете только вы и ваша камера. Ограничения в вашей фотографии находятся в вас, то, что
+                            мы видим, то мы и есть
+                        </div>
+                        <div class="slider__text">
+                            ©Эрнст Хаас
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__item-content">
+                        <div class="slider__title">
+                            ФОТОХОСТИНГ RAiSRUN
+                        </div>
+                        <div class="slider__text">
+                            Фотографии – это открытые двери в прошлое, но они позволяют заглянуть в будущее
+                        </div>
+                        <div class="slider__text">
+                            ©Салли Манн
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container_search">
+        <div class="container">
+
+            <form class="sch">
+                <input type="text" class="sch" placeholder="Поиск по хэштегу">
+                <button type="submit" class="sch"></button>
+            </form>
+        </div>
+        </div>
+    </section>
+
+
+    <section class="lenta_photo">
+        <div class="container">
+
+            <div class="top_photo__top">
+                <div class="top_photo__title-box">
+                    <div class="top_photo__title">
+                        Лента фотографий
+                    </div>
+                </div>
+            </div>
+            <div class="container_lenta">
+                <div class="top_photo__items">
+                    <div class="top_photo__item">
+
+
+                        <div class="top_photo__item-text">
+                            <div class="image-box"></div>
+                        </div>
+
+                    </div>
+                    <div class="top_photo__item">
+
+
+                        <div class="top_photo__item-text">
+                            <div class="image-box2"></div>
+                        </div>
+
+                    </div>
+                    <div class="top_photo__item">
+
+
+                        <div class="top_photo__item-text">
+                            <div class="image-box3"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__info">
+                        <div class="footer__title">
+                            Фотохостинг RaisRun
+                        </div>
+                        <div class="footer__text">
+                            Приостановленный момент - оживляет дейсвтвие!
+                        </div>
+                        <a data-fancybox data-src="#modal" href="javascript:;" class="header__btn" href="#">
+                            Обратная связь
+                        </a>
+                        <ul class="footer__list">
+                            <li><a class="footer__phone" href="tel:+79994950876">+7-(999)-495-0876</a></li>
+                            <li><a href="#">mariaigorevna1206@gmail.com</a></li>
+                            <li><a class="footer__adress" href="#">Томск, Красноармейская ул., 146</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__map">
+                        <iframe height="250px"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2204.797781680577!2d84.9760504158195!3d56.45401608074669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4326ecb685e1cf85%3A0x5216463ced706c80!2z0JrRgNCw0YHQvdC-0LDRgNC80LXQudGB0LrQsNGPINGD0LsuLCAxNDYsINCi0L7QvNGB0LosINCi0L7QvNGB0LrQsNGPINC-0LHQuy4sIDYzNDA0NQ!5e0!3m2!1sru!2sru!4v1602268269053!5m2!1sru!2sru"
+                            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+                            aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <div class="container">
+                <div class="copy__text">
+                    © 2020 RaisRun. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modal">
+        <form>
+            <input type="text" placeholder="Введите ваше имя">
+            <input type="text" placeholder="Введите ваш телефон">
+            <input type="text" placeholder="Введите ваш email">
+            <input type="submit" value="Отправить">
+        </form>
+    </div>
+
+    <div id="sign_up" style="display: none;">
+        <h1 class="title_sign_in__up">Cоздайте аккаунт в
+            <a href="" hrea="#">
+                <img src="{% static "img/logo.png" %}" alt="">
+            </a>
+        </h1>
+        <form>
+            <input type="text" placeholder="Имя">
+            <input type="text" placeholder="Фамилия">
+            <input type="text" required="true" placeholder="Логин">
+            <input type="text" placeholder="Телефон">
+            <input type="text" placeholder="email">
+            <input type="password" required="true" placeholder="Пароль">
+            <input type="password" required="true" placeholder="Подтвердить">
+            <p class="polit_conf"> При регистрации Вы соглашаетесь с <a href="#" style="color:dodgerblue"> Политикой
+                    конфиденциальности</a></p>
+            <input type="submit" class="submit__btn" value="Отправить">
+            <input type="reset" class="reset__btn" value="Очистить">
+        </form>
+    </div>
+
+    <div id="sign_in" style="display: none;">
+        <h1 class="title_sign_in__up">Вход</h1>
+        <form>
+            <input type="text" required="true" placeholder="Логин">
+            <input type="password" required="true" placeholder="Пароль">
+            <input type="submit" class="submit__btn" value="Отправить">
+            <input type="reset" class="reset__btn" value="Очистить">
+        </form>
+    </div>
+
+    <div id="support" style="display: none;">
+        <h1 class="title_sign_in__up">Техподдержка</h1>
+        <form>
+            <p></p>
+            <div class="news__slider-text">
+                О возникших вопросах или найденных неисправновностях Вы всегда можете написать нам на почту
+                <a href="#" style="color:dodgerblue">pochta@gmail.com</a>
+            </div>
+        </form>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static "js/popuu_img.js" %}"></script>
+     <script defer>
+        i = 0;
+        var numphoto;
+        $.ajax({
+            url: '/ajax/get_count/',
+            data: {},
+			async: false,
+            dataType: 'json',
+            success: function (data) {
+                if (data.count > 0) {
+                    numphoto = data.count;
+                }
+            }
+        });
+
+
+        const shuffleArray = arr => arr.sort(() => Math.random() - 0.5)
+
+        var list = []
+        var indices = []
+		console.log(numphoto);
+        var numberOfImages = numphoto;
+
+        for (i = 1; i < numberOfImages; i++) {
+            $.ajax({
+                url: '/ajax/get_photo/',
+                data: {
+                    'fileNum': i
+                },
+                dataType: 'text',
+                success: function (data){
+						console.log(data)
+                        indices[i] = parseInt(i);
+                        list[i] = data;
+                    }
+					//Здесь должы быть отрисованы картинки. Дада именно внутри цикла.
+            });
+        }
+
+        shuffleArray(indices);
+        for (i = 0; i < (numberOfImages-(numberOfImages%3))/3; i++) {
+
+            if (list[indices[i]] == undefined) {
+                continue;
+            }
+
+            var newHeading = "<h1>Имя рейтинг</h1>";
+            var newParagraph = document.createElement("a");
+            newParagraph.setAttribute('class', ' fancybox');
+            newParagraph.setAttribute('rel', 'gallery1');
+            newParagraph.setAttribute('href', list[indices[i]]);
+            newParagraph.innerHTML = "<em>Full</em>";
+            var newImage = $("<img src=\"" + list[indices[i]] + "\" style = \"width: 300px; \" height:300px \">");
+            var img = document.createElement('img');
+            img.setAttribute('src', list[indices[i]]);
+            img.className = "top_photo__item";
+
+            $('.image-box').append(newHeading, newImage, newParagraph);
+
+        }
+        for (i = (numberOfImages-(numberOfImages%3))/3; i < ((numberOfImages-(numberOfImages%3))/3)*2; i++) {
+
+            if (list[indices[i]] == undefined) {
+                continue;
+            }
+
+            var newHeading = "<h1>Имя рейтинг</h1>";
+            var newParagraph = document.createElement("a");
+            newParagraph.setAttribute('class', ' fancybox');
+            newParagraph.setAttribute('rel', 'gallery1');
+            newParagraph.setAttribute('href', list[indices[i]]);
+            newParagraph.innerHTML = "<em>Full</em>";
+            var newImage = $("<img src=\"" + list[indices[i]] + "\" style = \"width: 300px; \" height:300px \">");
+            var img = document.createElement('img');
+            img.setAttribute('src', list[indices[i]]);
+            img.className = "top_photo__item";
+
+            $('.image-box2').append(newHeading, newImage, newParagraph);
+
+        }
+        for (i = ((numberOfImages-(numberOfImages%3))/3)*2; i < numberOfImages; i++) {
+
+            if (list[indices[i]] == undefined) {
+                continue;
+            }
+
+            var newHeading = "<h1>Имя рейтинг</h1>";
+            var newParagraph = document.createElement("a");
+            newParagraph.setAttribute('class', ' fancybox');
+            newParagraph.setAttribute('rel', 'gallery1');
+            newParagraph.setAttribute('href', list[indices[i]]);
+            newParagraph.innerHTML = "<em>Full</em>";
+            var newImage = $("<img src=\"" + list[indices[i]] + "\" style = \"width: 300px; \" height:300px \">");
+            var img = document.createElement('img');
+            img.setAttribute('src', list[indices[i]]);
+            img.className = "top_photo__item";
+
+            $('.image-box3').append(newHeading, newImage, newParagraph);
+
+        }
+
+
+    </script>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static "js/jquery.fancybox.min.js" %}"></script>
+    <script src="{% static "js/slick.min.js" %}"></script>
+    <script src="{% static "js/main.js" %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".fancybox").fancybox();
+        });
+    </script>
+</body>
+
+</html>
