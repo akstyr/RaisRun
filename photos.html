@@ -253,7 +253,7 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="{% static "js/popuu_img.js" %}"></script>
-    <script defer>
+     <script defer>
         i = 0;
         $.ajax({
             url: '/ajax/get_count/',
@@ -261,7 +261,7 @@
             dataType: 'json',
             success: function (data) {
                 if (data.count > 0) {
-                    i = data.count;
+                    numphoto = data.count;
                 }
             }
         });
@@ -271,7 +271,7 @@
 
         var list = []
         var indices = []
-        var numberOfImages = 10;
+        var numberOfImages = numphoto;
 
         for (i = 1; i < numberOfImages; i++) {
             $.ajax({
@@ -281,13 +281,14 @@
                 },
                 dataType: 'json',
                 success: function (data) {
-                        //оработка файла с фото
+                        indices[i] = parseInt(i);
+						list[i] = data;
                     }
                 }
             });
         }
         shuffleArray(indices);
-        for (i = 0; i < 3; i++) {
+        for (i = 0; i < (numberOfImages-(numberOfImages%3))/3; i++) {
 
             if (list[indices[i]] == undefined) {
                 continue;
@@ -307,7 +308,7 @@
             $('.image-box').append(newHeading, newImage, newParagraph);
 
         }
-        for (i = 3; i < 6; i++) {
+        for (i = (numberOfImages-(numberOfImages%3))/3; i < ((numberOfImages-(numberOfImages%3))/3)*2; i++) {
 
             if (list[indices[i]] == undefined) {
                 continue;
@@ -327,7 +328,7 @@
             $('.image-box2').append(newHeading, newImage, newParagraph);
 
         }
-        for (i = 6; i < numberOfImages; i++) {
+        for (i = ((numberOfImages-(numberOfImages%3))/3)*2; i < numberOfImages; i++) {
 
             if (list[indices[i]] == undefined) {
                 continue;
