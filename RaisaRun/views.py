@@ -1,12 +1,13 @@
+import json
+import os
+import base64
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.edit import CreateView
-from django.http import FileResponse
+from django.http import HttpResponse
 from django.http import JsonResponse
 from django.contrib.auth.models import User
-import json
-import os
  
 def index(request):
     data = {}
@@ -36,4 +37,6 @@ def get_count(reques):
 def get_photo(request):
 	fileNum = request.GET.get('fileNum', None)
 	print("photo_" + fileNum + ".jpg")
-	return FileResponse(open("static/img/photos/photo_"+ fileNum + ".jpg", "rb"))
+	image = open("static/img/photos/photo_"+ fileNum + ".jpg", "rb")
+	image_base64 = base64.b64encode(image.read())
+	return HttpResponse(image_base64)

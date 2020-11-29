@@ -116,6 +116,8 @@
         </div>
     </section>
 
+	//Картиночка по айдишнику чтобы через js поменять ей данные и вместо img_b64 вставить картинку
+	<img id="myImgTag" src="data:image/png;base64, img_b64"></img>
 
     <section class="lenta_photo">
         <div class="container">
@@ -256,6 +258,8 @@
      <script defer>
         i = 0;
         var numphoto;
+		// Получить число всех картинок
+		// Нужно поменять размер в пикселях (в js или сами картинки ужать)
         $.ajax({
             url: '/ajax/get_count/',
             data: {},
@@ -269,31 +273,33 @@
         });
 
 
-        const shuffleArray = arr => arr.sort(() => Math.random() - 0.5)
+        const shuffleArray = arr => arr.sort(() => Math.random() - 0.5) // Не надо
 
         var list = []
-        var indices = []
-		console.log(numphoto);
-        var numberOfImages = numphoto;
+        var indices = [] 
 
-        for (i = 1; i < numberOfImages; i++) {
+		// Получение всех фоток по i
+		// Отрисовывать картиночки нужно внутри success: ...
+		// Чтобы отрисовка происходила асинхронно (так будет быстрее)
+        for (i = 1; i < numphoto; i++) {
             $.ajax({
                 url: '/ajax/get_photo/',
                 data: {
-                    'fileNum': i
+                    'fileNum': i		// Запрос фото i
                 },
-                dataType: 'text',
+				// Получение фото (хранится в data)
+				// data лучше не копировать никуда, а то может сожрать всю память
                 success: function (data){
-						console.log(data)
-                        indices[i] = parseInt(i);
-                        list[i] = data;
+						console.log(data);
+						// Найти хтмл элемент по АйДи и пихнуть ему картинку из data
+						let img = document.getElementById('myImgTag').setAttribute('src','data:image/png;base64, ' + data);
+						console.log(img);
                     }
-					//Здесь должы быть отрисованы картинки. Дада именно внутри цикла.
             });
         }
 
         shuffleArray(indices);
-        for (i = 0; i < (numberOfImages-(numberOfImages%3))/3; i++) {
+        for (i = 0; i < (numphoto-(numphoto%3))/3; i++) {
 
             if (list[indices[i]] == undefined) {
                 continue;
@@ -313,7 +319,7 @@
             $('.image-box').append(newHeading, newImage, newParagraph);
 
         }
-        for (i = (numberOfImages-(numberOfImages%3))/3; i < ((numberOfImages-(numberOfImages%3))/3)*2; i++) {
+        for (i = (numphoto-(numphoto%3))/3; i < ((numphoto-(numphoto%3))/3)*2; i++) {
 
             if (list[indices[i]] == undefined) {
                 continue;
@@ -333,7 +339,7 @@
             $('.image-box2').append(newHeading, newImage, newParagraph);
 
         }
-        for (i = ((numberOfImages-(numberOfImages%3))/3)*2; i < numberOfImages; i++) {
+        for (i = ((numphoto-(numphoto%3))/3)*2; i < numphoto; i++) {
 
             if (list[indices[i]] == undefined) {
                 continue;
