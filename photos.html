@@ -303,18 +303,18 @@
                         // Найти хтмл элемент по АйДи и пихнуть ему картинку из data
                         if (i>=1) and (i<(numphoto-(numphoto%3))/3) 
                         {
-                        let img = document.getElementById('myImgTag1').setAttribute('src','data:image/png;base64, ' + data);
+                        let img = document.getElementById('myImgTag1').setAttribute('src','data:image/png;base64, ' + data + "\" style = \"width: 300px; \" height:300px \">");
                         img.className = "top_photo__item";
                         console.log(newHeading,img,newParagraph);}
                         if (i>=(numphoto-(numphoto%3))/3)  and (i<((numphoto-(numphoto%3))/3)*2)
                         {
-                        let img = document.getElementById('myImgTag2').setAttribute('src','data:image/png;base64, ' + data);
+                        let img = document.getElementById('myImgTag2').setAttribute('src','data:image/png;base64, ' + data + "\" style = \"width: 300px; \" height:300px \">");
                         img.className = "top_photo__item";
                         console.log(newHeading,img,newParagraph);
                         }
                         if (i>=((numphoto-(numphoto%3))/3)*2) and (i<numphoto)
                         {
-                        let img = document.getElementById('myImgTag3').setAttribute('src','data:image/png;base64, ' + data);
+                        let img = document.getElementById('myImgTag3').setAttribute('src','data:image/png;base64, ' + data + "\" style = \"width: 300px; \" height:300px \">");
                         img.className = "top_photo__item";
                         console.log(newHeading,img,newParagraph);
                         }
@@ -349,3 +349,5 @@
 </body>
 
 </html>
+
+
