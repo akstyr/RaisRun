@@ -134,7 +134,7 @@
 
 
                         <div class="top_photo__item-text">
-                            //Картиночка по айдишнику чтобы через js поменять ей данные и вместо img_b64 вставить картинку
+                            //Передаю картинку по id myImgTag1 из файла js 1-й цикл
 	                        <img id="myImgTag1" src="data:image/png;base64, img_b64"></img>
                         </div>
 
@@ -143,7 +143,7 @@
 
 
                         <div class="top_photo__item-text">
-                            //Картиночка по айдишнику чтобы через js поменять ей данные и вместо img_b64 вставить картинку
+                            //Передаю картинку по id myImgTag2 из файла js 2-й цикл
 	                        <img id="myImgTag2" src="data:image/png;base64, img_b64"></img>
                         </div>
 
@@ -152,7 +152,7 @@
 
 
                         <div class="top_photo__item-text">
-                            //Картиночка по айдишнику чтобы через js поменять ей данные и вместо img_b64 вставить картинку
+                            //Передаю картинку по id myImgTag3 из файла js 3-й цикл
 	                        <img id="myImgTag3" src="data:image/png;base64, img_b64"></img>
                         </div>
 
@@ -293,19 +293,23 @@
 				// data лучше не копировать никуда, а то может сожрать всю память
                 success: function (data){
                         console.log(data);
-                        var newHeading = "<h1>Имя рейтинг</h1>";
-                        var newParagraph = document.createElement("a");
-                        newParagraph.setAttribute('class', ' fancybox');
-                        newParagraph.setAttribute('rel', 'gallery1');
-                        newParagraph.setAttribute('href', list[indices[i]]);
-                        newParagraph.innerHTML = "<em>Full</em>";
+                        var newHeading = "<h1>Имя рейтинг</h1>"; // Это то, что дальше должно пойти в log
+                        var newParagraph = document.createElement("a");// Это создание тега <a> для стиля ленты
+                        newParagraph.setAttribute('class', ' fancybox');// Это в тег <a> подключается библиотека стилей
+                        newParagraph.setAttribute('rel', 'gallery1');// Это в тег <a> подключается параметр из прошлой библиотеки стилей
+                        //newParagraph.setAttribute('href', list[indices[i]]); Вообще этот параметр нужен, но я не знаю как его обработать, он нужен чтобы передать
+			// href путь до широкоформатного файла, чтобы потом в ленте тыкая на пикчу можно было открыть её полноразмерно
+                        //newParagraph.innerHTML = "<em>Full</em>"; Это была кнопка, чтобы можно было пикчу открыть полноразмерно
                 
-                        // Найти хтмл элемент по АйДи и пихнуть ему картинку из data
+                        // Первый цикл, проверяет если i входит в диапазон он 1 до 1/3 всех numphoto, то заходит в это условие и пихает пикчи через id myImgTag1
                         if (i>=1) and (i<(numphoto-(numphoto%3))/3) 
                         {
+				// Дабавила стиль изобрражения (ширину и высоту)
                         let img = document.getElementById('myImgTag1').setAttribute('src','data:image/png;base64, ' + data + "\" style = \"width: 300px; \" height:300px \">");
-                        img.className = "top_photo__item";
-                        console.log(newHeading,img,newParagraph);}
+                        img.className = "top_photo__item";// Добавляю к элементу img класс из css
+			// Найти хтмл элемент по АйДи и пихнуть ему картинку из data
+                        console.log(newHeading,img,newParagraph);} // На счет этого сомневаюсь, не могу проверить будет ли работать, тут я сначала передаю первый стиль,
+			// потом картиночку,потом еще один стиль
                         if (i>=(numphoto-(numphoto%3))/3)  and (i<((numphoto-(numphoto%3))/3)*2)
                         {
                         let img = document.getElementById('myImgTag2').setAttribute('src','data:image/png;base64, ' + data + "\" style = \"width: 300px; \" height:300px \">");
