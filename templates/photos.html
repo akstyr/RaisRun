@@ -115,13 +115,23 @@
         </div>
         </div>
     </section>
-
-	//Картиночка по айдишнику чтобы через js поменять ей данные и вместо img_b64 вставить картинку
-	<img id="myImgTag" src="data:image/png;base64, img_b64"></img>
+	<div class="image_container">
+		<!-- Картиночка по айдишнику чтобы через js поменять ей данные и вместо img_b64 вставить картинку -->
+    	<img id="myImgTag" src="data:image/png;base64, img_b64"></img>
+	</div>
+	<style>
+		.image_container {
+			width: 500px;
+			height: 400px;
+		}
+		.image_container img {
+			width: 100%;
+			height: auto;
+		}
+	</style>
 
     <section class="lenta_photo">
         <div class="container">
-
             <div class="top_photo__top">
                 <div class="top_photo__title-box">
                     <div class="top_photo__title">
