@@ -1,7 +1,7 @@
+ 
 <!DOCTYPE html>
 <html lang="ru">
-{% load static%}
-
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +10,12 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Piazzolla&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static "css/normalize.css" %}">
     <link rel="stylesheet" href="{% static "css/fonts.css" %}">
-    <link rel="stylesheet" href="{% static "css/jquery.fancybox.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/fonts.css" %}">
     <link rel="stylesheet" href="{% static "css/slick.css" %}">
     <link rel="stylesheet" href="{% static "css/style.css" %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
@@ -26,12 +26,9 @@
                 <div class="container">
                     <a class="header__phone" href="tel:+79994950876">+7-(999)-495-0876</a>
                     <a class="header__email" href="#">mariaigorevna1206@gmail.com</a>
-                    <a data-fancybox data-src="#modal" href="javascript:;" class="header__btn" href="#">Обратная
-                        связь</a>
-                    <a data-fancybox data-src="#sign_up" href="javascript:;" class="header__btn__sign_up"
-                        href="#">Регистрация</a>
-                    <a data-fancybox data-src="#sign_in" href="javascript:;" class="header__btn__sign_in"
-                        href="#">Вход</a>
+                    <a data-fancybox data-src="#modal" href="javascript:;" class="header__btn" href="#">Обратная связь</a>
+                    <a data-fancybox data-src="#sign_up" href="javascript:;" class="header__btn__sign_up" href="#">Регистрация</a>
+                    <a data-fancybox data-src="#sign_in" href="signup" class="header__btn__sign_in" href="signup">Вход</a>
                 </div>
             </div>
         </div>
@@ -45,7 +42,7 @@
                     </div>
                     <nav class="menu">
                         <ul>
-                            <li><a href="home">Главная</a></li>
+                            <li><a href="home">Говно</a></li>
                             <li><a data-fancybox data-src="#support" href="#">Поддержка</a></li>
                             <li><a href="photos">Лента</a></li>
                         </ul>
@@ -55,11 +52,6 @@
         </div>
     </header>
     <section class="slider">
-        <style>
-            .slider {
-                background-image: url("{% static "img/slider-fon_5.jpg" %}");
-            }
-        </style>
         <div class="container">
             <div class="slider__inner">
                 <div class="slider__item">
@@ -105,31 +97,6 @@
             </div>
         </div>
     </section>
-    <section class="container_search">
-        <div class="container">
-
-            <form class="sch">
-                <input type="text" class="sch" placeholder="Поиск по хэштегу">
-                <button type="submit" class="sch"></button>
-            </form>
-        </div>
-        </div>
-    </section>
-	<div class="image_container">
-		<!-- Картиночка по айдишнику чтобы через js поменять ей данные и вместо img_b64 вставить картинку -->
-    	<img id="myImgTag" src="data:image/png;base64, img_b64"></img>
-	</div>
-	<style>
-		.image_container {
-			width: 500px;
-			height: 400px;
-		}
-		.image_container img {
-			width: 100%;
-			height: auto;
-		}
-	</style>
-
     <section class="lenta_photo">
         <div class="container">
             <div class="top_photo__top">
@@ -141,135 +108,122 @@
             </div>
             <div class="container_lenta">
                 <div class="top_photo__items">
+
                     <div class="top_photo__item">
-
-
                         <div class="top_photo__item-text">
                             <div class="image-box"></div>
                         </div>
-
                     </div>
+
                     <div class="top_photo__item">
-
-
                         <div class="top_photo__item-text">
                             <div class="image-box2"></div>
                         </div>
-
                     </div>
+
                     <div class="top_photo__item">
-
-
                         <div class="top_photo__item-text">
                             <div class="image-box3"></div>
                         </div>
-
                     </div>
                 </div>
-
-
-
-
             </div>
         </div>
-    </section>
+    </section> 
 
     <footer class="footer">
         <div class="footer__content">
-            <div class="container">
-                <div class="footer__inner">
-                    <div class="footer__info">
-                        <div class="footer__title">
-                            Фотохостинг RaisRun
-                        </div>
-                        <div class="footer__text">
-                            Приостановленный момент - оживляет дейсвтвие!
-                        </div>
-                        <a data-fancybox data-src="#modal" href="javascript:;" class="header__btn" href="#">
-                            Обратная связь
-                        </a>
-                        <ul class="footer__list">
-                            <li><a class="footer__phone" href="tel:+79994950876">+7-(999)-495-0876</a></li>
-                            <li><a href="#">mariaigorevna1206@gmail.com</a></li>
-                            <li><a class="footer__adress" href="#">Томск, Красноармейская ул., 146</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__map">
-                        <iframe height="250px"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2204.797781680577!2d84.9760504158195!3d56.45401608074669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4326ecb685e1cf85%3A0x5216463ced706c80!2z0JrRgNCw0YHQvdC-0LDRgNC80LXQudGB0LrQsNGPINGD0LsuLCAxNDYsINCi0L7QvNGB0LosINCi0L7QvNGB0LrQsNGPINC-0LHQuy4sIDYzNDA0NQ!5e0!3m2!1sru!2sru!4v1602268269053!5m2!1sru!2sru"
-                            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
-                            aria-hidden="false" tabindex="0"></iframe>
-                    </div>
+          <div class="container">
+            <div class="footer__inner">
+              <div class="footer__info">
+                <div class="footer__title">
+                  Фотохостинг RaisRun
                 </div>
+                <div class="footer__text">
+                  Приостановленный момент - оживляет дейсвтвие!
+                </div>
+                <a data-fancybox data-src="#modal" href="javascript:;" class="header__btn" href="#">
+                  Обратная связь
+                </a>
+                <ul class="footer__list">
+                  <li><a class="footer__phone" href="tel:+79994950876">+7-(999)-495-0876</a></li>
+                  <li><a href="#">mariaigorevna1206@gmail.com</a></li>
+                  <li><a class="footer__adress" href="#">Томск, Красноармейская ул., 146</a></li>
+                </ul>
+              </div>
+              <div class="footer__map">
+                <iframe height="250px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2204.797781680577!2d84.9760504158195!3d56.45401608074669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4326ecb685e1cf85%3A0x5216463ced706c80!2z0JrRgNCw0YHQvdC-0LDRgNC80LXQudGB0LrQsNGPINGD0LsuLCAxNDYsINCi0L7QvNGB0LosINCi0L7QvNGB0LrQsNGPINC-0LHQuy4sIDYzNDA0NQ!5e0!3m2!1sru!2sru!4v1602268269053!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              </div>
             </div>
+          </div>
         </div>
         <div class="footer__copy">
-            <div class="container">
-                <div class="copy__text">
-                    © 2020 RaisRun. Все права защищены.
-                </div>
+          <div class="container">
+            <div class="copy__text">
+              © 2020 RaisRun. Все права защищены.
             </div>
+          </div>
         </div>
-    </footer>
+      </footer> 
+      
+  <div id="modal" style="display: none;">
+    <form>
+      <input type="text" placeholder="Введите ваше имя">
+      <input type="text" placeholder="Введите ваш телефон">
+      <input type="text" placeholder="Введите ваш email">
+      <input type="submit" value="Отправить">
+    </form>
+  </div>
 
-    <div id="modal">
-        <form>
-            <input type="text" placeholder="Введите ваше имя">
-            <input type="text" placeholder="Введите ваш телефон">
-            <input type="text" placeholder="Введите ваш email">
-            <input type="submit" value="Отправить">
-        </form>
+  <div id="sign_up" style="display: none;">
+    <h1 class="title_sign_in__up">Cоздайте аккаунт в
+        <a href="" hrea="#">
+            <img src="{% static "img/logo.png" %}" alt="">
+        </a>
+    </h1>
+    <form>
+        <input type="text" placeholder="Имя">
+        <input type="text" placeholder="Фамилия">
+        <input type="text" required="true" placeholder="Логин">
+        <input type="text" placeholder="Телефон">
+        <input type="text" placeholder="email">
+        <input type="password" required="true" placeholder="Пароль">
+        <input type="password" required="true" placeholder="Подтвердить">
+        <p class="polit_conf"> При регистрации Вы соглашаетесь с <a href="#" style="color:dodgerblue"> Политикой конфиденциальности</a></p>
+        <input type="submit" class="submit__btn" value="Отправить">
+        <input type="reset" class="reset__btn"value="Очистить">
+    </form>
+  </div>
+
+  <div id="sign_in" style="display: none;">
+    <h1 class="title_sign_in__up">Вход</h1>
+    <form>
+        <input type="text" required="true" placeholder="Логин">
+        <input type="password" required="true" placeholder="Пароль">
+        <input type="submit" class="submit__btn" value="Отправить">
+        <input type="reset" class="reset__btn"value="Очистить">
+    </form>
+  </div> 
+
+  <div id="support" style="display: none;">
+    <h1 class="title_sign_in__up">Техподдержка</h1>
+    <form>
+        <p></p>
+        <div class="news__slider-text">
+            О возникших вопросах или найденных неисправновностях Вы всегда можете написать нам на почту
+            <a href="#" style="color:dodgerblue">pochta@gmail.com</a>
+        </div>
+    </form>
+  </div> 
+
     </div>
 
-    <div id="sign_up" style="display: none;">
-        <h1 class="title_sign_in__up">Cоздайте аккаунт в
-            <a href="" hrea="#">
-                <img src="{% static "img/logo.png" %}" alt="">
-            </a>
-        </h1>
-        <form>
-            <input type="text" placeholder="Имя">
-            <input type="text" placeholder="Фамилия">
-            <input type="text" required="true" placeholder="Логин">
-            <input type="text" placeholder="Телефон">
-            <input type="text" placeholder="email">
-            <input type="password" required="true" placeholder="Пароль">
-            <input type="password" required="true" placeholder="Подтвердить">
-            <p class="polit_conf"> При регистрации Вы соглашаетесь с <a href="#" style="color:dodgerblue"> Политикой
-                    конфиденциальности</a></p>
-            <input type="submit" class="submit__btn" value="Отправить">
-            <input type="reset" class="reset__btn" value="Очистить">
-        </form>
     </div>
-
-    <div id="sign_in" style="display: none;">
-        <h1 class="title_sign_in__up">Вход</h1>
-        <form>
-            <input type="text" required="true" placeholder="Логин">
-            <input type="password" required="true" placeholder="Пароль">
-            <input type="submit" class="submit__btn" value="Отправить">
-            <input type="reset" class="reset__btn" value="Очистить">
-        </form>
-    </div>
-
-    <div id="support" style="display: none;">
-        <h1 class="title_sign_in__up">Техподдержка</h1>
-        <form>
-            <p></p>
-            <div class="news__slider-text">
-                О возникших вопросах или найденных неисправновностях Вы всегда можете написать нам на почту
-                <a href="#" style="color:dodgerblue">pochta@gmail.com</a>
-            </div>
-        </form>
-    </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="{% static "js/popuu_img.js" %}"></script>
-     <script defer>
+    <script defer>
         i = 0;
         var numphoto;
-		// Получить число всех картинок
-		// Нужно поменять размер в пикселях (в js или сами картинки ужать)
         $.ajax({
             url: '/ajax/get_count/',
             data: {},
@@ -297,13 +251,11 @@
                 data: {
                     'fileNum': i		// Запрос фото i
                 },
-				// Получение фото (хранится в data)
-				// data лучше не копировать никуда, а то может сожрать всю память
+				dataType: 'json',
                 success: function (data){
-						console.log(data);
-						// Найти хтмл элемент по АйДи и пихнуть ему картинку из data
-						let img = document.getElementById('myImgTag').setAttribute('src','data:image/png;base64, ' + data);
-						console.log(img);
+						console.log(data.image);
+						console.log(data.rating);
+						let img = document.getElementById('myImgTag').setAttribute('src','data:image/png;base64, ' + data.image);
                     }
             });
         }

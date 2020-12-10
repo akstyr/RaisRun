@@ -1,4 +1,4 @@
-import json
+mport json
 import os
 import base64
 from django.shortcuts import render
@@ -17,6 +17,11 @@ def photos(request):
 	data = {}
 	return render(request, "photos.html", context=data)
 
+def load_photo(request):
+	data = {}
+	return render(request, "load_photo.html", context=data)
+
+# AJAX responses
 def registrate_user(request):
 	username = request.GET.get('username', None)
 	
@@ -39,4 +44,4 @@ def get_photo(request):
 	print("photo_" + fileNum + ".jpg")
 	image = open("static/img/photos/photo_"+ fileNum + ".jpg", "rb")
 	image_base64 = base64.b64encode(image.read())
-	return HttpResponse(image_base64)
+	return JsonResponse({'image': str(image_base64), "rating": str(10.0)})
