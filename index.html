@@ -1,7 +1,6 @@
  
 <!DOCTYPE html>
 <html lang="ru">
-{% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Piazzolla&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{% static "css/normalize.css" %}">
-    <link rel="stylesheet" href="{% static "css/fonts.css" %}">
-    <link rel="stylesheet" href="{% static "css/fonts.css" %}">
-    <link rel="stylesheet" href="{% static "css/slick.css" %}">
-    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/jquery.fancybox.min.css" />
+    <script src="js/jquery.fancybox.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
@@ -28,7 +29,7 @@
                     <a class="header__email" href="#">mariaigorevna1206@gmail.com</a>
                     <a data-fancybox data-src="#modal" href="javascript:;" class="header__btn" href="#">Обратная связь</a>
                     <a data-fancybox data-src="#sign_up" href="javascript:;" class="header__btn__sign_up" href="#">Регистрация</a>
-                    <a data-fancybox data-src="#sign_in" href="signup" class="header__btn__sign_in" href="signup">Вход</a>
+                    <a data-fancybox data-src="#sign_in" href="javascript:;" class="header__btn__sign_in" href="#">Вход</a>
                 </div>
             </div>
         </div>
@@ -37,7 +38,7 @@
                 <div class="header__content-inner">
                     <div class="header_logo">
                         <a href="" hrea="#">
-                            <img src="{% static "img/logo.png" %}" alt="">
+                            <img src="img/logo.png" alt="">
                         </a>
                     </div>
                     <nav class="menu">
@@ -132,7 +133,7 @@
                         Имя пользователя
                     </div>
                     <div class="top_photo__item-text">
-                        <img src="{% static "img/top_photo/top_photo1.jpg" %}" alt="" width="250" height="250">
+                        <img src="img/top_photo/top_photo1.jpg" alt="" width="250" height="250">
                         рейтинг
                     </div>
 
@@ -143,7 +144,7 @@
                         Имя пользователя
                     </div>
                     <div class="top_photo__item-text">
-                        <img src="{% static "img/top_photo/top_photo1.jpg" %}" alt="" width="250" height="250">
+                        <img src="img/top_photo/top_photo1.jpg" alt="" width="250" height="250">
                         рейтинг
                     </div>
 
@@ -154,7 +155,7 @@
                         Имя пользователя
                     </div>
                     <div class="top_photo__item-text">
-                        <img src="{% static "img/top_photo/top_photo1.jpg" %}" alt="" width="250" height="250">
+                        <img src="img/top_photo/top_photo1.jpg" alt="" width="250" height="250">
                         рейтинг
                     </div>
 
@@ -184,7 +185,7 @@
                         Антончик Евгений
                     </div>
                     <div class="top_photo__item-text">
-                        <img src="{% static "img/team/Evgen.png"%}" alt="" width="150" height="150">
+                        <img src="img/team/Evgen.png" alt="" width="150" height="150">
                     </div>
                     <div class="team_photo__item-text">
                         Бэк-энд разработчик
@@ -196,7 +197,7 @@
                         Кравцова Анастасия
                     </div>
                     <div class="top_photo__item-text">
-                        <img src="{% static "img/team/Nasty.png"%}" alt="" width="150" height="150">
+                        <img src="img/team/Nasty.png" alt="" width="150" height="150">
                     </div>
                     <div class="team_photo__item-text">
                         Архитектор Базы данных
@@ -208,7 +209,7 @@
                         Сайфутдинов Ильвир
                     </div>
                     <div class="top_photo__item-text">
-                        <img src="{% static "img/team/Ilvir.png"%}" alt="" width="150" height="150">
+                        <img src="img/team/Ilvir.png" alt="" width="150" height="150">
                     </div>
                     <div class="team_photo__item-text">
                          Тим-лид Бэк-энд разработчик
@@ -220,7 +221,7 @@
                        Грохотова Екатерина
                     </div>
                     <div class="top_photo__item-text">
-                        <img src="{% static "img/team/Katy.png"%}" alt="" width="150" height="150">
+                        <img src="img/team/Katy.png" alt="" width="150" height="150">
                     </div>
                     <div class="team_photo__item-text">
                         Тестировщик
@@ -232,7 +233,7 @@
                         Васильева Мария
                     </div>
                     <div class="top_photo__item-text">
-                        <img src="{% static "img/team/Masha.png"%}" alt="" width="150" height="150">
+                        <img src="img/team/Masha.png" alt="" width="150" height="150">
                     </div>
                     <div class="team_photo__item-text">
                         Фронт-энд разработчик
@@ -368,7 +369,7 @@
             </div>
           </div>
         </div>
-      </footer> 
+      </footer>
       
   <div id="modal" style="display: none;">
     <form>
@@ -382,7 +383,7 @@
   <div id="sign_up" style="display: none;">
     <h1 class="title_sign_in__up">Cоздайте аккаунт в
         <a href="" hrea="#">
-            <img src="{% static "img/logo.png" %}" alt="">
+            <img src="img/logo.png" alt="">
         </a>
     </h1>
     <form>
@@ -418,24 +419,22 @@
             <a href="#" style="color:dodgerblue">pochta@gmail.com</a>
         </div>
     </form>
-  </div> 
-
-    </div>
+  </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <script> AOS.init(); </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="{% static "js/jquery.fancybox.min.js" %}" ></script>
-    <script src="{% static "js/slick.min.js"%}" ></script>
-    <script src="{% static "js/main.js"%}" ></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(".fancybox").fancybox();
-        });
-    </script>
-
+	<script src="js/jquery.fancybox.min.js" ></script>
+    <script src="js/slick.min.js" ></script>
+    <script src="js/main.js" ></script>
+    <script>
+        $(document).ready(function() {
+            $(".fancybox")
+            .fancybox({
+             padding: 0,
+             width: 530
+            });
+        });       
+      </script>
 </body>
-
 </html>
